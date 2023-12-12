@@ -197,6 +197,7 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
      0px 1px 1px 0px rgba(46, 47, 66, 0.16),
       0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    max-width: 264px;
 }
 
 .team-card-sign {
@@ -239,6 +240,49 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     fill: #F4F4FD;
 }
 
+/* Our Portfolio */
+
+.overlay {
+    display: none;
+}
+
+.portf-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.portf-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.portf-card {
+    border: 1px solid #F4F4FD;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16), 
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.portf-card-sign {
+    padding: 32px 16px;
+}
+
+.portf-card-title {
+    color: #2E2F42;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2; 
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+}
+
+.portf-card-text {
+    font-weight: 400;
+}
+
 @media screen and (max-width: 767px) {
 .navigation {
     display: none;
@@ -250,6 +294,10 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     line-height: 0;
     background-color: transparent;
     stroke: #2F2F37;
+}
+
+.portf-image {
+    width: 288px;
 }
 }
 
@@ -343,7 +391,8 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
 
     /* Advantages & Our Team */
     .advantages-list,
-    .team-list {
+    .team-list,
+    .portf-list {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -352,16 +401,28 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     }
 
     .advantages-list-item,
-    .team-card {
+    .team-card,
+    .portf-card {
         width: calc((100% - 24px)/2)
     }
 
     .team-list {
-        max-width: 552px;
         margin: 0 auto;
         row-gap: 64px;
     }
+    /* Our Portfolio */
 
+    .portf-list {
+        row-gap: 72px;
+    }
+
+    .portf-card {
+        box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    }
+
+    .portf-image {
+        width: 356px;
+    }
 }
 
     @media screen and (min-resolution: 192dpi) and (min-width: 768px),
@@ -380,6 +441,7 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
 
 @media screen and (min-width: 1158px) {
     .container {
+        padding: 0 15px;
       max-width: 1440px;
     }
 
@@ -440,6 +502,14 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     }
     
     /* Advantages & Our Team*/
+
+    .advantages-section,
+    .team-section,
+    .portf-section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
     .advantages-list,
     .team-list {
         flex-wrap: nowrap;
@@ -448,10 +518,6 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     .advantages-list-item,
     .team-card {
         width: calc((100% - 3*24px)/4)
-    }
-
-    .team-list {
-        max-width: 1128px;
     }
 
     .advantages-list-icon-container {
@@ -484,6 +550,57 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     background-color: #404bbf;
     }
 
+    /* Our Portfolio */
+
+    .portf-list {
+        row-gap: 48px;
+        max-width: 1128px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .portf-card {
+        width: calc((100% - 48px) / 3);
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .portf-image {
+        position: relative;
+        overflow: hidden;
+        width: 360px;
+    }
+    
+    .overlay {
+        display: block;
+        font-weight: 400;
+        color: #F4F4FD;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 40px 32px;
+        overflow: auto;
+        transform: translateY(100%);
+        background-color: #4D5AE5;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .portf-card:hover .overlay {
+        transform: translateY(0%);
+    }
+    
+    .portf-card:hover {
+        border: 1px solid #F4F4FD;
+        box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16), 
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    }
+
+    .portf-card-sign {
+        border: 1px solid #e7e9fc; 
+        border-top: none; 
+    }
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 1158px),
