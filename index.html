@@ -512,6 +512,7 @@
         </div>
       </section>
     </main>
+    <!-- Footer -->
     <footer class="footer-section">
       <div class="container footer-all">
         <div class="footer-content">
@@ -580,7 +581,74 @@
           </div>
         </div>
     </footer>
-    <!-- <div class="backdrop">
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu-wrapper">
+      <div class="container mobile-menu-container">
+        <button class="mobile-menu-close-btn" type="button">
+          <svg
+            class="mobile-menu-close-btn-icon"
+            width="8"
+            height="8"
+            aria-label="mobile menu close icon"
+          >
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu-navigation">
+          <ul class="mobile-menu">
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-link current" href="">Studio</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-link" href="">Portfolio</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-link" href="">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="mobile-menu-contacts">
+          <li class="mobile-menu-contacts-item">
+            <a href="tel:+110001111111" class="mobile-menu-contacts-link current">+11 (000) 111-11-11</a>
+          </li>
+          <li class="mobile-menu-contacts-item">
+            <a href="mailto:info@devstudio.com" class="mobile-menu-contacts-link">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu-social-list">
+          <li class="mobile-menu-social-list-item">
+            <a class="social-link" href="">
+              <svg class="social-link-icon" width="24" height="24" >
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-list-item">
+            <a class="social-link" href="">
+              <svg class="social-link-icon" width="24" height="24" >
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-list-item">
+            <a class="social-link" href="">
+              <svg class="social-link-icon" width="24" height="24" >
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-list-item">
+            <a class="social-link" href="">
+              <svg class="social-link-icon" width="24" height="24" >
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Modal window -->
+    <div class="backdrop is-open">
         <div class="modal">
             <button class="modal-close-btn" type="button">
                 <svg
@@ -594,7 +662,7 @@
               </button> 
               <p class="leave-contacts-form-tytle">Leave your contacts and we will call you back</p>
               <form class="leave-contacts-form">
-                <div class="contacts-form-wrapper">
+                <di v class="contacts-form-wrapper">
                   <label class="contacts-form-label" for="user-name">Name</label>
                   <div class="contacts-form-input-wrapper">
                     <input class="contacts-form-input"
@@ -613,7 +681,7 @@
                   <use href="./images/icons.svg#icon-person"></use>
                   </svg>
                   </div>
-                </div>
+                </di>
                 <div class="contacts-form-wrapper">
                   <label class="contacts-form-label" for="user-phone">Phone</label>
                   <div class="contacts-form-input-wrapper">
@@ -679,13 +747,14 @@
                   <use href="./images/icons.svg#icon-vector"></use>
                   </svg>
                     </span>
-                    I accept the terms and conditions of the
+                    <span>I accept the terms and conditions of the
                     <a class="privacy-policy-link" href=""> Privacy Policy</a>
+                    </span>
                   </label>
                 </div>
                 <button class="contacts-form-submit" type="submit">Send</button>
               </form>
         </div>
-    </div> -->
+    </div>
   </body>
 </html>

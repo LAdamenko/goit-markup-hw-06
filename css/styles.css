@@ -386,6 +386,200 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     margin-left: 16px;
 }
 
+/* Backdrop */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Modal window */
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 288px;
+    min-height: 623px;
+    background-color: #FCFCFC;
+    border-radius: 4px;
+    padding: 72px 16px 24px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+     0px 1px 3px rgba(0, 0, 0, 0.12),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    padding: 0;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 50%;
+    fill: #2E2F42;
+}
+
+.leave-contacts-form-tytle {
+    display: block;
+    font-weight: 500;
+    width: 256px;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #2E2F42;
+}
+
+.contacts-form-wrapper {
+    margin-bottom: 8px;
+}
+
+.contacts-form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+    margin-bottom: 4px;
+}
+
+.contacts-form-input-wrapper {
+    position: relative;
+}
+
+.contacts-form-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    border-radius: 4px;
+    padding-left: 34px;
+    background-color: transparent;
+}
+
+.contacts-form-input-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: #2E2F42;
+}
+
+.contacts-form-comment-wrapper {
+    margin-bottom: 16px;
+}
+
+.contacts-form-comment {
+    width: 100%;
+    height: 120px;
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.40);
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    border-radius: 4px;
+    padding: 8px 16px;
+    resize: none;
+    background-color: transparent;
+}
+
+.contacts-form-comment::placeholder {
+    color: rgba(46, 47, 66, 0.40);
+}
+
+.contacts-form-checkbox-wrapper {
+    margin-bottom: 24px;
+}
+
+.contacts-form-checkbox-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+    display: flex;
+    align-items: center;
+}
+
+.contacts-form-own-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    border-radius: 2px;
+    margin-right: 8px;
+    fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-form-checkbox:checked
++ .contacts-form-checkbox-label
+> .contacts-form-own-checkbox {
+    background-color: #404BBF;
+    fill: #F4F4FD;
+    border: none;
+}
+
+.contacts-form-own-checkbox-icon {
+    fill: #ffffff;
+    opacity: 0;
+}
+
+.contacts-form-checkbox:checked
++ .contacts-form-checkbox-label
+ .contacts-form-own-checkbox-icon {
+    opacity: 1;
+}
+
+.privacy-policy-link {
+    color: #4D5AE5;
+}
+
+.contacts-form-submit {
+    min-width: 169px;
+    height: 56px;
+    padding: 16px 32px;
+    background-color: #4D5AE5;
+    color: #FFFFFF;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
 @media screen and (max-width: 767px) {
 .navigation {
     display: none;
@@ -402,6 +596,99 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
 .portf-image {
     width: 288px;
 }
+
+
+
+/* Mobile menu */
+
+.mobile-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-wrapper.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+.mobile-menu-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    padding: 0;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #E7E9FC;
+    border-radius: 50%;
+    fill: #2E2F42;
+}
+.mobile-menu-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    min-height: 640px;
+    margin-bottom: 40px;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 72px;
+}
+
+.mobile-menu-link {
+    display: block;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    color: #2E2F42;
+    text-transform: capitalize;
+}
+
+.mobile-menu-link.current {
+    color: #404BBF;
+}
+
+.mobile-menu-social-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.mobile-menu-contacts {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.mobile-menu-contacts-link {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #434455;
+}
+
+.mobile-menu-contacts-link.current {
+    color: #4D5AE5;
+}
+
 }
 
 
