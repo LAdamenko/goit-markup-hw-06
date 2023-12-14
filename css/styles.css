@@ -580,7 +580,9 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
+
 @media screen and (max-width: 767px) {
+
 .navigation {
     display: none;
 }
@@ -596,8 +598,6 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
 .portf-image {
     width: 288px;
 }
-
-
 
 /* Mobile menu */
 
@@ -856,6 +856,23 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     .subscribe-input {
         width: 264px;
     }
+
+    /* Backdrop */
+
+    .modal {
+        width: 408px;
+        min-height: 584px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .leave-contacts-form-tytle {
+        width: 360px;
+    }
+
+    .mobile-menu-wrapper {
+        display: none;
+    }
 }
 
     @media screen and (min-resolution: 192dpi) and (min-width: 768px),
@@ -927,11 +944,13 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
         margin-bottom: 48px;
     }
     .main-button {
+        cursor: pointer;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     .main-button:hover,
     .main-button:focus {
-    background-color: #404BBF;
+        background-color: #404BBF;
     }
     
     /* Advantages & Our Team*/
@@ -1078,6 +1097,65 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     .subscribe-btn:focus {
         background-color: #31d0aa;
     }
+
+    /* Modal window */
+
+    .modal-close-btn {
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+    }  
+
+    .modal-close-btn-icon {
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .modal-close-btn:hover,
+    .modal-close-btn:focus {
+        fill: #FFFFFF;
+        background-color: #404BBF;
+        border: none;
+    }
+
+    .contacts-form-input {
+        outline: 0px solid transparent;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .contacts-form-input:focus {
+        border-color: #4D5AE5;
+    }
+
+    .contacts-form-input-icon {
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contacts-form-input:focus+.contacts-form-input-icon {
+        fill: #4D5AE5;
+    }
+
+    .contacts-form-comment {
+        outline: 0px solid transparent;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contacts-form-comment:focus {
+        border-color: #4D5AE5;
+    }
+
+    .contacts-form-own-checkbox {
+        cursor: pointer;
+    }
+
+    .contacts-form-submit {
+        cursor: pointer;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .contacts-form-submit:hover,
+    .contacts-form-submit:focus {
+        background-color: #404BBF;
+    }
+
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 1158px),
