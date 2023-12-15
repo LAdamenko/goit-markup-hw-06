@@ -1162,6 +1162,8 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
 
 }
 
+/* Main background */
+
 @media screen and (min-resolution: 192dpi) and (min-width: 1158px),
 screen and (min-resolution: 2dppx) and (min-width: 1158px),
 screen and (min-device-pixel-ratio: 2) and (mmin-width: 1158px) {
